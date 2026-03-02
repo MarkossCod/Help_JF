@@ -1,0 +1,271 @@
+/* =========================
+   PALETA DE CORES
+========================= */
+:root {
+    --azul-principal: #1e3a5f;
+    --azul-secundario: #2f80ed;
+    --verde-apoio: #27ae60;
+    --cinza-claro: #f4f6f8;
+    --branco: #ffffff;
+    --cinza-escuro: #333;
+}
+
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cinza-claro);
+    color: var(--cinza-escuro);
+    line-height: 1.6;
+}
+
+/* =========================
+   LAYOUT PADRÃO
+========================= */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section {
+    background-color: var(--branco);
+    padding: 60px 30px;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.section h2 {
+    color: var(--azul-principal);
+    margin-bottom: 20px;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    background-color: var(--azul-principal);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: var(--branco);
+    font-size: 22px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin-left: 25px;
+}
+
+.menu a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: var(--azul-secundario);
+}
+
+/* =========================
+   BANNER
+========================= */
+.banner {
+    background: linear-gradient(rgba(30,58,95,0.85), rgba(30,58,95,0.85)),
+                url('https://images.unsplash.com/photo-1547683905-f686c993aae5') center/cover;
+    color: var(--branco);
+    padding: 120px 20px;
+    text-align: center;
+}
+
+.banner h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.banner p {
+    font-size: 18px;
+}
+
+/* =========================
+   BOTÃO
+========================= */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 20px;
+    background-color: var(--verde-apoio);
+    color: var(--branco);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #219150;
+}
+
+/* =========================
+   LINKS NOTÍCIAS
+========================= */
+.links a {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--azul-secundario);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   DESTAQUE
+========================= */
+.destaque {
+    background-color: #eef5ff;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+footer {
+    background-color: var(--azul-principal);
+    color: var(--branco);
+    text-align: center;
+    padding: 30px 10px;
+    margin-top: 30px;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .menu {
+        margin-top: 10px;
+    }
+
+    .banner h2 {
+        font-size: 26px;
+    }
+}
+
+/* =========================
+   CARDS DE NOTÍCIAS PREMIUM
+========================= */
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.news-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* Imagem do card */
+.news-image {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Imagens simuladas */
+.news-image.g1 {
+    background-image: url('https://images.unsplash.com/photo-1504711434969-e33886168f5c');
+}
+
+.news-image.em {
+    background-image: url('https://images.unsplash.com/photo-1495020689067-958852a7765e');
+}
+
+.news-image.tempo {
+    background-image: url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d');
+}
+
+/* Conteúdo */
+.news-content {
+    padding: 20px;
+}
+
+.news-tag {
+    display: inline-block;
+    background-color: var(--azul-secundario);
+    color: #fff;
+    padding: 5px 12px;
+    font-size: 12px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.news-content h3 {
+    color: var(--azul-principal);
+    margin-bottom: 10px;
+}
+
+.news-content p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Botão */
+.news-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: var(--verde-apoio);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.news-btn:hover {
+    background-color: #219150;
+}
+
+.news-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
