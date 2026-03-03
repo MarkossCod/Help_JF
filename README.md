@@ -37,7 +37,7 @@ A plataforma organiza essas informações de forma técnica, objetiva e acessív
 
 A aplicação encontra-se publicada por meio do GitHub Pages:
 
-👉 https://markosscod.github.io/Site_Help/
+👉 https://markosscod.github.io/Help_JF/
 
 ---
 
