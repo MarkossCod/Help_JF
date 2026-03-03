@@ -52,6 +52,7 @@ O projeto foi desenvolvido como site estático, não sendo necessária a utiliza
 
 ## 📁 Estrutura do Projeto
 Site_Help/
+|
 ├── index.html
 ├── css/
 │ └── style.css
